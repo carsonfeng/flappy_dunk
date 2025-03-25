@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Dunk - 篮球飞行挑战</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-overlay">
+            <div id="start-screen" class="screen">
+                <h1>Flappy Dunk</h1>
+                <div class="mode-selection">
+                    <button class="mode-button" data-mode="classic">经典模式</button>
+                    <button class="mode-button" data-mode="time">计时模式</button>
+                    <button class="mode-button" data-mode="challenge">挑战模式</button>
+                </div>
+                <div class="tutorial">
+                    <p>点击屏幕开始游戏</p>
+                    <div class="tutorial-text">
+                        <p>🎯 躲避障碍物</p>
+                        <p>🏀 完成dunk获得额外分数</p>
+                        <p>🎮 点击屏幕控制角色上升</p>
+                        <p>💪 挑战最高分</p>
+                    </div>
+                </div>
+                <div id="leaderboard" class="leaderboard"></div>
+            </div>
+            <div id="game-over" class="screen hidden">
+                <h2>游戏结束</h2>
+                <p id="game-over-text"></p>
+                <p>得分: <span id="final-score">0</span></p>
+                <p>最高分: <span id="high-score">0</span></p>
+                <button id="restart-button">重新开始</button>
+            </div>
+            <div id="score-display">0</div>
+            <button id="sound-toggle" class="sound-button">🔊</button>
+            <div id="tutorial-tip" class="tutorial-tip hidden">
+                <p>点击屏幕控制角色上升</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html> 
